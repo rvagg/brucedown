@@ -12,5 +12,5 @@ export default function brucedown(markdown: string, options?: {
  * Dispose of the highlighter instance to free resources.
  * Give this a call when you're done processing.
  */
-export function dispose(): void;
+export function dispose(): Promise<void>;
 //# sourceMappingURL=brucedown.d.ts.map

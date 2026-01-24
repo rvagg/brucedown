@@ -2,21 +2,21 @@ import { Marked } from 'marked'
 import { gfmHeadingId } from 'marked-gfm-heading-id'
 import { createHighlighter, bundledLanguages } from 'shiki'
 
-/** @type {import('shiki').Highlighter | null} */
-let highlighter = null
+/** @type {Promise<import('shiki').Highlighter> | null} */
+let highlighterPromise = null
 
 /**
  * Get or create the Shiki highlighter instance (lazy initialisation)
  * @returns {Promise<import('shiki').Highlighter>}
  */
-async function getHighlighter () {
-  if (!highlighter) {
-    highlighter = await createHighlighter({
+function getHighlighter () {
+  if (!highlighterPromise) {
+    highlighterPromise = createHighlighter({
       themes: ['github-light'],
       langs: []
     })
   }
-  return highlighter
+  return highlighterPromise
 }
 
 /**
@@ -130,9 +130,10 @@ export default async function brucedown (markdown, options = {}) {
  * Dispose of the highlighter instance to free resources.
  * Give this a call when you're done processing.
  */
-export function dispose () {
-  if (highlighter) {
-    highlighter.dispose()
-    highlighter = null
+export async function dispose () {
+  if (highlighterPromise) {
+    const hl = await highlighterPromise
+    hl.dispose()
+    highlighterPromise = null
   }
 }
