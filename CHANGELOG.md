@@ -1,3 +1,9 @@
+## [2.0.2](https://github.com/rvagg/brucedown/compare/v2.0.1...v2.0.2) (2026-01-24)
+
+### Bug Fixes
+
+* cached highlighter promise for single instance ([#10](https://github.com/rvagg/brucedown/issues/10)) ([915dfba](https://github.com/rvagg/brucedown/commit/915dfbae1456a795bd95ea6ed49c34bb42392972))
+
 ## [2.0.1](https://github.com/rvagg/brucedown/compare/v2.0.0...v2.0.1) (2026-01-24)
 
 ### Bug Fixes
