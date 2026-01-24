@@ -1,4 +1,5 @@
 import { Marked } from 'marked'
+import { gfmHeadingId } from 'marked-gfm-heading-id'
 import { createHighlighter, bundledLanguages } from 'shiki'
 
 /** @type {import('shiki').Highlighter | null} */
@@ -54,10 +55,13 @@ async function highlight (code, lang, theme, hl) {
     }
   }
 
-  return hl.codeToHtml(code, {
+  let html = hl.codeToHtml(code, {
     lang: language,
     theme
   })
+  // Add newlines after each line span for proper rendering in <pre>
+  html = html.replace(/<\/span><span class="line">/g, '</span>\n<span class="line">')
+  return html
 }
 
 /**
@@ -83,6 +87,7 @@ export default async function brucedown (markdown, options = {}) {
   let blockIndex = 0
 
   const marked = new Marked()
+  marked.use(gfmHeadingId())
   marked.use({
     gfm: true,
     renderer: {
@@ -90,6 +95,17 @@ export default async function brucedown (markdown, options = {}) {
         const index = blockIndex++
         codeBlocks.push({ code: token.text, lang: token.lang || '', index })
         return `<!--CODEBLOCK:${index}-->`
+      },
+      link ({ href, title, tokens }) {
+        // Don't auto-link email addresses - just return the text
+        if (href && href.startsWith('mailto:')) {
+          const text = this.parser.parseInline(tokens)
+          return text
+        }
+        // Default link rendering
+        const text = this.parser.parseInline(tokens)
+        const titleAttr = title ? ` title="${title}"` : ''
+        return `<a href="${href}"${titleAttr}>${text}</a>`
       }
     }
   })
