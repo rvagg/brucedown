@@ -1,0 +1,122 @@
+import { Marked } from 'marked'
+import { createHighlighter, bundledLanguages } from 'shiki'
+
+/** @type {import('shiki').Highlighter | null} */
+let highlighter = null
+
+/**
+ * Get or create the Shiki highlighter instance (lazy initialisation)
+ * @returns {Promise<import('shiki').Highlighter>}
+ */
+async function getHighlighter () {
+  if (!highlighter) {
+    highlighter = await createHighlighter({
+      themes: ['github-light'],
+      langs: []
+    })
+  }
+  return highlighter
+}
+
+/**
+ * Highlight code with Shiki
+ * @param {string} code
+ * @param {string} lang
+ * @param {import('shiki').BundledTheme} theme
+ * @param {import('shiki').Highlighter} hl
+ * @returns {Promise<string>}
+ */
+async function highlight (code, lang, theme, hl) {
+  if (!lang) {
+    // No language specified, just wrap it up plain
+    const escaped = code.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    return `<pre><code>${escaped}</code></pre>`
+  }
+
+  // Normalise language name
+  const language = /** @type {import('shiki').BundledLanguage} */ (lang.toLowerCase())
+
+  // Check if it's a known language before having a crack at loading it
+  if (!(language in bundledLanguages)) {
+    const escaped = code.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    return `<pre><code class="language-${lang}">${escaped}</code></pre>`
+  }
+
+  // Load the language if not already loaded
+  const loadedLangs = hl.getLoadedLanguages()
+  if (!loadedLangs.includes(language)) {
+    try {
+      await hl.loadLanguage(language)
+    } catch {
+      // Language not supported, return unhighlighted
+      const escaped = code.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      return `<pre><code class="language-${lang}">${escaped}</code></pre>`
+    }
+  }
+
+  return hl.codeToHtml(code, {
+    lang: language,
+    theme
+  })
+}
+
+/**
+ * Convert GitHub Flavoured Markdown to HTML with syntax highlighting
+ * @param {string} markdown - The markdown source to convert
+ * @param {object} [options] - Optional configuration
+ * @param {import('shiki').BundledTheme} [options.theme='github-light'] - Shiki theme to use
+ * @returns {Promise<string>} The resulting HTML
+ */
+export default async function brucedown (markdown, options = {}) {
+  const theme = /** @type {import('shiki').BundledTheme} */ (options.theme || 'github-light')
+  const hl = await getHighlighter()
+
+  // Make sure the theme is loaded
+  const loadedThemes = hl.getLoadedThemes()
+  if (!loadedThemes.includes(theme)) {
+    await hl.loadTheme(theme)
+  }
+
+  // Collect code blocks for async highlighting
+  /** @type {Array<{code: string, lang: string, index: number}>} */
+  const codeBlocks = []
+  let blockIndex = 0
+
+  const marked = new Marked()
+  marked.use({
+    gfm: true,
+    renderer: {
+      code: (token) => {
+        const index = blockIndex++
+        codeBlocks.push({ code: token.text, lang: token.lang || '', index })
+        return `<!--CODEBLOCK:${index}-->`
+      }
+    }
+  })
+
+  // First pass: parse markdown, collecting code blocks
+  let html = /** @type {string} */ (marked.parse(markdown + '\n'))
+
+  // Highlight all code blocks in parallel
+  const highlighted = await Promise.all(
+    codeBlocks.map(block => highlight(block.code, block.lang, theme, hl))
+  )
+
+  // Swap placeholders for highlighted code
+  for (let i = 0; i < codeBlocks.length; i++) {
+    html = html.replace(`<!--CODEBLOCK:${i}-->`, highlighted[i])
+  }
+
+  return html
+}
+
+/**
+ * Dispose of the highlighter instance to free resources.
+ * Give this a call when you're done processing.
+ */
+export function dispose () {
+  if (highlighter) {
+    highlighter.dispose()
+    highlighter = null
+  }
+}
