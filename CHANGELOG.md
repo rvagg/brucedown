@@ -1,3 +1,9 @@
+## [2.0.1](https://github.com/rvagg/brucedown/compare/v2.0.0...v2.0.1) (2026-01-24)
+
+### Bug Fixes
+
+* add heading id links, newlines in <pre> codeblocks, no auto-email links ([#9](https://github.com/rvagg/brucedown/issues/9)) ([dd7c3fc](https://github.com/rvagg/brucedown/commit/dd7c3fc971c2f2ac3f21d02424a94412989aed0f))
+
 ## [2.0.0](https://github.com/rvagg/brucedown/compare/v1.1.1...v2.0.0) (2026-01-24)
 
 ### ⚠ BREAKING CHANGES
