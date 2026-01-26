@@ -55,13 +55,10 @@ async function highlight (code, lang, theme, hl) {
     }
   }
 
-  let html = hl.codeToHtml(code, {
+  return hl.codeToHtml(code, {
     lang: language,
     theme
   })
-  // Add newlines after each line span for proper rendering in <pre>
-  html = html.replace(/<\/span><span class="line">/g, '</span>\n<span class="line">')
-  return html
 }
 
 /**
