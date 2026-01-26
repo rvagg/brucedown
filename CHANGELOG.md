@@ -1,3 +1,9 @@
+## [2.0.3](https://github.com/rvagg/brucedown/compare/v2.0.2...v2.0.3) (2026-01-26)
+
+### Bug Fixes
+
+* revert manual newlining ([#11](https://github.com/rvagg/brucedown/issues/11)) ([aafd549](https://github.com/rvagg/brucedown/commit/aafd549f7decbc136070bc6d366d03d4ba0456fd))
+
 ## [2.0.2](https://github.com/rvagg/brucedown/compare/v2.0.1...v2.0.2) (2026-01-24)
 
 ### Bug Fixes
