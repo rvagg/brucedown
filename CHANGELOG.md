@@ -1,3 +1,9 @@
+## [2.0.4](https://github.com/rvagg/brucedown/compare/v2.0.3...v2.0.4) (2026-03-09)
+
+### Trivial Changes
+
+* **deps:** bump shiki from 3.23.0 to 4.0.1 ([#12](https://github.com/rvagg/brucedown/issues/12)) ([193d4b1](https://github.com/rvagg/brucedown/commit/193d4b10f6f6756db3daaff6dc35c4d1489f6056))
+
 ## [2.0.3](https://github.com/rvagg/brucedown/compare/v2.0.2...v2.0.3) (2026-01-26)
 
 ### Bug Fixes
