@@ -25,13 +25,7 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",
-    "emitDeclarationOnly": true,
-    "paths": {
-      "brucedown": [
-        "brucedown.js"
-      ]
-    }
+    "emitDeclarationOnly": true
   },
   "include": [
     "brucedown.js"
