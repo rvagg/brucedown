@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/rvagg/brucedown/compare/v2.0.4...v2.0.5) (2026-03-30)
+
+### Trivial Changes
+
+* **deps-dev:** bump typescript from 5.9.3 to 6.0.2 ([d029b11](https://github.com/rvagg/brucedown/commit/d029b11cfff6bb581297b7c6df633133bdd55007))
+* update deps & upgrade to typescript 6 ([6c8ecf4](https://github.com/rvagg/brucedown/commit/6c8ecf429b335a7c12796d8446767ac627bf4e24))
+
 ## [2.0.4](https://github.com/rvagg/brucedown/compare/v2.0.3...v2.0.4) (2026-03-09)
 
 ### Trivial Changes
