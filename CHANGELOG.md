@@ -1,3 +1,9 @@
+## [2.0.6](https://github.com/rvagg/brucedown/compare/v2.0.5...v2.0.6) (2026-04-20)
+
+### Trivial Changes
+
+* **deps:** bump marked from 17.0.6 to 18.0.0 ([#14](https://github.com/rvagg/brucedown/issues/14)) ([b44a006](https://github.com/rvagg/brucedown/commit/b44a0069f310838a52f327a4427e4f6e8244a5aa))
+
 ## [2.0.5](https://github.com/rvagg/brucedown/compare/v2.0.4...v2.0.5) (2026-03-30)
 
 ### Trivial Changes
