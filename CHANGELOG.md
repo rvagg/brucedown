@@ -1,3 +1,9 @@
+## [2.0.7](https://github.com/rvagg/brucedown/compare/v2.0.6...v2.0.7) (2026-06-22)
+
+### Trivial Changes
+
+* **deps:** bump actions/checkout from 6 to 6.0.3 ([#16](https://github.com/rvagg/brucedown/issues/16)) ([8693b15](https://github.com/rvagg/brucedown/commit/8693b154c029d543e95a69ed9baa6cf8329b5026))
+
 ## [2.0.6](https://github.com/rvagg/brucedown/compare/v2.0.5...v2.0.6) (2026-04-20)
 
 ### Trivial Changes
