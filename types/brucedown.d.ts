@@ -6,11 +6,11 @@
  * @returns {Promise<string>} The resulting HTML
  */
 export default function brucedown(markdown: string, options?: {
-    theme?: import("shiki").BundledTheme | undefined;
+    theme?: import('shiki').BundledTheme;
 }): Promise<string>;
 /**
  * Dispose of the highlighter instance to free resources.
  * Give this a call when you're done processing.
  */
-export function dispose(): Promise<void>;
+export declare function dispose(): Promise<void>;
 //# sourceMappingURL=brucedown.d.ts.map

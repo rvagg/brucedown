@@ -1,1 +1,1 @@
-{"version":3,"file":"brucedown.d.ts","sourceRoot":"","sources":["../brucedown.js"],"names":[],"mappings":"AA+DA;;;;;;GAMG;AACH,4CALW,MAAM,YAEd;IAA+C,KAAK;CACpD,GAAU,OAAO,CAAC,MAAM,CAAC,CAuD3B;AAED;;;GAGG;AACH,yCAMC"}
+{"version":3,"file":"brucedown.d.ts","sourceRoot":"","sources":["../brucedown.js"],"names":[],"mappings":"AA+DA;;;;;;GAMG;AACH,wBAA8B,SAAS,CAAE,QAAQ,EALtC,MAKsC,EAAE,OAAO,AAJvD,CAEA,EADA;IAA+C,KAAK,AAApD,CACA,EADQ,OAAO,OAAO,EAAE,YAAY,CACpC;CAE4D,GAFlD,OAAO,CAAC,MAAM,CAAC,CAuD3B;AAED;;;GAGG;AACH,wBAAsB,OAAO,kBAM5B"}
