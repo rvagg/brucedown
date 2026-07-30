@@ -1,3 +1,9 @@
+## [2.0.14](https://github.com/rvagg/brucedown/compare/v2.0.13...v2.0.14) (2026-07-30)
+
+### Trivial Changes
+
+* downgrade broken changelog maker, backfill entries ([#23](https://github.com/rvagg/brucedown/issues/23)) ([0634af0](https://github.com/rvagg/brucedown/commit/0634af0a8762c336a76277f90531d26f44fbd0c1))
+
 ## [2.0.13](https://github.com/rvagg/brucedown/compare/v2.0.12...v2.0.13) (2026-07-29)
 
 ### Trivial Changes

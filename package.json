@@ -1,6 +1,6 @@
 {
   "name": "brucedown",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "A near-perfect GitHub style Markdown to HTML converter",
   "type": "module",
   "main": "brucedown.js",
