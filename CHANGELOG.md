@@ -1,12 +1,33 @@
 ## [2.0.13](https://github.com/rvagg/brucedown/compare/v2.0.12...v2.0.13) (2026-07-29)
 
+### Trivial Changes
+
+* **deps-dev:** bump typescript from 6.0.3 to 7.0.2 ([2978618](https://github.com/rvagg/brucedown/commit/297861834107e2e5571c9c0c7f23da8e5b7e35fb))
+* fixes for ts@7 ([c8a2ef8](https://github.com/rvagg/brucedown/commit/c8a2ef8d4e78e730f8da5d3491259dfb478b5f79))
+
 ## [2.0.12](https://github.com/rvagg/brucedown/compare/v2.0.11...v2.0.12) (2026-07-27)
+
+### Trivial Changes
+
+* **deps:** bump the github-actions-minor-patch group with 2 updates ([#22](https://github.com/rvagg/brucedown/issues/22)) ([0a69664](https://github.com/rvagg/brucedown/commit/0a69664fb0b6a0eb1e95f65737b3c33144860926))
 
 ## [2.0.11](https://github.com/rvagg/brucedown/compare/v2.0.10...v2.0.11) (2026-07-21)
 
+### Trivial Changes
+
+* **ci:** slow down dependabot, add depsound, pin actions by hash ([#21](https://github.com/rvagg/brucedown/issues/21)) ([f4ad46f](https://github.com/rvagg/brucedown/commit/f4ad46fe300d8578e79c1b3683a69ecd72c96961))
+
 ## [2.0.10](https://github.com/rvagg/brucedown/compare/v2.0.9...v2.0.10) (2026-07-20)
 
+### Trivial Changes
+
+* **deps:** bump actions/setup-node from 6 to 7 ([#19](https://github.com/rvagg/brucedown/issues/19)) ([b9fc36e](https://github.com/rvagg/brucedown/commit/b9fc36e2ee9c9864425b291d03e1dc510e2a1015))
+
 ## [2.0.9](https://github.com/rvagg/brucedown/compare/v2.0.8...v2.0.9) (2026-07-06)
+
+### Trivial Changes
+
+* **deps-dev:** bump conventional-changelog-conventionalcommits ([#18](https://github.com/rvagg/brucedown/issues/18)) ([5d64ef8](https://github.com/rvagg/brucedown/commit/5d64ef8aeb8bd8424b9920efa757af6640bc7025))
 
 ## [2.0.8](https://github.com/rvagg/brucedown/compare/v2.0.7...v2.0.8) (2026-06-29)
 
