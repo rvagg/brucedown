@@ -1,3 +1,9 @@
+## [2.0.16](https://github.com/rvagg/brucedown/compare/v2.0.15...v2.0.16) (2026-08-03)
+
+### Trivial Changes
+
+* **deps-dev:** bump @semantic-release/changelog from 6.0.3 to 7.0.0 ([#27](https://github.com/rvagg/brucedown/issues/27)) ([aa3d438](https://github.com/rvagg/brucedown/commit/aa3d438ebb1a9dbbb76c9972fd2419c4239e3601))
+
 ## [2.0.15](https://github.com/rvagg/brucedown/compare/v2.0.14...v2.0.15) (2026-08-03)
 
 ### Trivial Changes
