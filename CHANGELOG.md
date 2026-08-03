@@ -1,3 +1,9 @@
+## [2.0.17](https://github.com/rvagg/brucedown/compare/v2.0.16...v2.0.17) (2026-08-03)
+
+### Trivial Changes
+
+* **deps-dev:** bump @semantic-release/git from 10.0.1 to 11.0.1 ([#26](https://github.com/rvagg/brucedown/issues/26)) ([a93d853](https://github.com/rvagg/brucedown/commit/a93d853e5387801848bdcf97632931afa617322e))
+
 ## [2.0.16](https://github.com/rvagg/brucedown/compare/v2.0.15...v2.0.16) (2026-08-03)
 
 ### Trivial Changes
