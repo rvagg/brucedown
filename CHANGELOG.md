@@ -1,3 +1,9 @@
+## [2.0.18](https://github.com/rvagg/brucedown/compare/v2.0.17...v2.0.18) (2026-10-02)
+
+### Trivial Changes
+
+* **deps-dev:** bump mocha from 11.8.0 to 12.0.2 ([#29](https://github.com/rvagg/brucedown/issues/29)) ([dad8ad0](https://github.com/rvagg/brucedown/commit/dad8ad0415bc0fc43061f616ba9582780c157e93))
+
 ## [2.0.17](https://github.com/rvagg/brucedown/compare/v2.0.16...v2.0.17) (2026-08-03)
 
 ### Trivial Changes
