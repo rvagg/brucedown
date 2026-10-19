@@ -1,3 +1,9 @@
+## [2.0.19](https://github.com/rvagg/brucedown/compare/v2.0.18...v2.0.19) (2026-10-19)
+
+### Trivial Changes
+
+* **deps:** bump actions/setup-node ([#31](https://github.com/rvagg/brucedown/issues/31)) ([b943204](https://github.com/rvagg/brucedown/commit/b94320462ab5c196e390b35e8a9f7930090ced99))
+
 ## [2.0.18](https://github.com/rvagg/brucedown/compare/v2.0.17...v2.0.18) (2026-10-02)
 
 ### Trivial Changes
