@@ -1,3 +1,9 @@
+## [2.0.20](https://github.com/rvagg/brucedown/compare/v2.0.19...v2.0.20) (2026-11-02)
+
+### Trivial Changes
+
+* **deps:** bump the github-actions-minor-patch group with 2 updates ([#32](https://github.com/rvagg/brucedown/issues/32)) ([b918b30](https://github.com/rvagg/brucedown/commit/b918b309dbd27c2a44c8f30f551fcdeec912523d))
+
 ## [2.0.19](https://github.com/rvagg/brucedown/compare/v2.0.18...v2.0.19) (2026-10-19)
 
 ### Trivial Changes
